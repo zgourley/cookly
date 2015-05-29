@@ -11,20 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150527022152) do
+ActiveRecord::Schema.define(version: 20150528205710) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cooks", force: :cascade do |t|
     t.string   "cook_name"
-    t.string   "string"
     t.string   "location"
     t.string   "cuisine"
     t.string   "specialty"
-    t.string   "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "cook_image"
+    t.text     "description"
   end
 
   create_table "meals", force: :cascade do |t|
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20150527022152) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "user_image"
   end
 
   add_foreign_key "meals", "cooks"
