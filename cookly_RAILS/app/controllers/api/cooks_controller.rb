@@ -37,7 +37,7 @@ module API
 
     private
       def cook_params
-        params.require(:cook).permit(:cook_name, :location, :cuisine, :specialty, :description, :cook_image)
+        params.require(:cook).permit(:cook_name, :password_digest, :location, :cuisine, :specialty, :description, :cook_image)
     end
 
   end
