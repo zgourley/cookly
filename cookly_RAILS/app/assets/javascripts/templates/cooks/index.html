@@ -1,0 +1,15 @@
+<div ng-init="cooksCtrl.getCookIndex()">
+  <h1>Cooks</h1>
+</div>
+
+<section>
+  <ul>
+    <li ng-repeat="cook in cooksCtrl.jsonCooks"> {{cook.cook_name}} {{cook.location}} {{cook.cuisine}}
+    <div>
+      <button>Show</button>
+      <button>Edit</button>
+      <button>Delete</button>
+    </div>
+    </li>
+  </ul>
+</section>
