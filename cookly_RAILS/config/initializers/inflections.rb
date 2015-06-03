@@ -6,7 +6,7 @@
 ActiveSupport::Inflector.inflections(:en) do |inflect|
   # inflect.plural 'cooks'
   # inflect.singular 'cook'
-  inflect.acronym 'API'
+  # inflect.acronym 'API'
   inflect.irregular 'cook', 'cooks'
 #   inflect.uncountable %w( fish sheep )
 end

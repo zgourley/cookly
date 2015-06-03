@@ -1,0 +1,49 @@
+<h1>Edit this Cook</h1>
+
+<%= form_for @cook do |f| %>
+
+  <div>
+    <%= f.label :cook_name %>
+    <%= f.text_field :cook_name %>
+  </div>
+
+  <div>
+    <%= f.label :cook_image %>
+    <%= f.text_field :cook_image %>
+  </div>
+
+  <div>
+    <%= f.label :location%>
+    <%= f.text_field :location %>
+  </div>
+
+  <div>
+    <%= f.label :cuisine %>
+    <%= f.text_field :cuisine %>
+  </div>
+
+  <div>
+    <%= f.label :specialty%>
+    <%= f.text_field :specialty %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation %>
+    <%= f.text_field :password_confirmation %>
+  </div>
+
+  <%= f.submit 'Update Cook' %>
+
+<% end %>
+
+

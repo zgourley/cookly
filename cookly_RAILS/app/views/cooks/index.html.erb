@@ -1,0 +1,10 @@
+<h1>Available Cooks</h1>
+<ul>
+  <% @cooks.each do |cook|%>
+    <li><%= cook.cook_name %>-<%= cook.location%>: <%= cook.cuisine%> </li>
+    <p><%= link_to 'Show', cook%> - <%= link_to 'Edit', edit_cook_path(cook) %> - <%= link_to 'Destroy', cook, method: :delete, data: {confirm: "Are you sure?"} %></p>
+  <% end %>
+ </ul>
+
+
+<%= link_to "New Cook", new_cook_path %>

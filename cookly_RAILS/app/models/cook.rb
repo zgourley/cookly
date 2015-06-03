@@ -7,7 +7,7 @@ class Cook < ActiveRecord::Base
 
   validates :cook_name, presence: true
 
-  def as_json(options={})
-    super(:except => [:password_digest, :created_at, :updated_at])
-  end
+  # def as_json(options={})
+  #   super(:except => [:password_digest, :created_at, :updated_at])
+  
 end

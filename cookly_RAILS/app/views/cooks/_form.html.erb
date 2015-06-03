@@ -1,0 +1,11 @@
+<%= simple_form_for @cook do |f| %>
+  <%= f.input :cook_name %>
+  <%= f.input :cook_image %>
+  <%= f.input :location %>
+  <%= f.input :cuisine, hint: "what style do you cook (Italian, French, burgers, etc)?" %>
+  <%= f.input :specialty, hint: "what are some of your best dishes (chicken parmesan, beef stroganoff, etc.)?" %>
+  <%= f.input :description, hint: "tell us something about yourself" %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation, hint: "at least six characters" %>
+  <%= f.button :submit, "Join Now" %>
+<% end %>
