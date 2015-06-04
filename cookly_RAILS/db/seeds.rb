@@ -2,7 +2,9 @@ Cook.destroy_all
 Rating.destroy_all
 User.destroy_all
 
-# user = User.create(user_name: "Kevin", email: "kevin@example.com")
+User.create(user_name: "Kevin", email: "kevin@example.com")
+User.create(user_name: "Evelyn", email: "evelyn@example.com")
+User.create(user_name: "Allie", email: "allie@example.com")
   
 
 Cook.create([
@@ -22,6 +24,11 @@ Cook.create([
   {cook_name: "Zack Gourley", password_digest: "password", location: "Santa Monica", cuisine: "Mexican", specialty: "quesadillas, burritos, fajitas", description: "It's authentic only in that I'm from Los Angeles."}
 
 ])
+
+Meal.create([
+  {cook_id: 1, user_id: 1, date: "2/5/1", time: "8 PM", location: "Santa Monica", info: "dinner for two", price: 50}
+
+  ])
 
 # Rating.create([
 #   {star: 4, comment: "Glenn is the freaking man!", cook: Cook.first},

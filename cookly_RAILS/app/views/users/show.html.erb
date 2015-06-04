@@ -1,0 +1,29 @@
+<h1> <%= @user.user_name %>'s Profile </h1>
+
+<p>Name: <%= @user.user_name%> </p> <br>
+<p>Image: <%= @user.user_image%> </p><br>
+<p>Location: <%= @user.email%> </p><br>
+
+<%= link_to 'Schedule a new meal', new_meal_path %>
+
+<h2>My Meals</h2>
+
+<% @accepted_meals.each do |meal| %>
+
+  <%= meal.date %>
+  <%= meal.time %>
+  <%= meal.location %>
+  <%= meal.info %>
+
+<% end %>
+
+<% @unaccepted_meals.each do |meal| %>
+
+  <%= meal.date %>
+  <%= meal.time %>
+  <%= meal.location %>
+  <%= meal.info %>
+
+<% end %>
+
+

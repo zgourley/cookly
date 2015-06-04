@@ -1,4 +1,4 @@
-<h1>Add a new Cook</h1>
+<h1>Register as a cook</h1>
 
 <%= simple_form_for @cook do |f| %>
   <%= f.input :cook_name %>
@@ -9,6 +9,6 @@
   <%= f.input :description, hint: "tell us something about yourself" %>
   <%= f.input :password %>
   <%= f.input :password_confirmation, hint: "at least six characters" %>
-  <%= f.button :submit, "Join Now" %>
+  <%= f.button :submit, "Sign Up" %>
 <% end %>
 

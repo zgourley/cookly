@@ -1,0 +1,47 @@
+<h1> Schedule a new meal </h1>
+
+<%= form_for @meal do |f| %>
+
+  <div>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </div>
+
+  <div>
+    <%= f.label :time %>
+    <%= f.time_field :time %>
+  </div>
+
+  <div>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div>
+    <%= f.label :price %>
+    <%= f.number_field(:price) %>
+  </div>
+
+   <div>
+    <%= f.label :info %>
+    <%= f.text_area :info %>
+  </div>
+
+<h1>Choose your cook</h1>
+
+<p>Choose a cook, and we'll send them a request to see if they're available for your meal time.</p>
+
+<div>
+  <%= f.collection_radio_buttons :cook_id, Cook.all, :id, :cook_name %><br>
+  <%= f.submit "Send Meal Request"%>
+<% end %>
+</div>
+
+
+
+
+
+
+
+
+

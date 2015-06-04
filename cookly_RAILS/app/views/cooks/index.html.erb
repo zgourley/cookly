@@ -2,7 +2,7 @@
 <ul>
   <% @cooks.each do |cook|%>
     <li><%= cook.cook_name %>-<%= cook.location%>: <%= cook.cuisine%> </li>
-    <p><%= link_to 'Show', cook%> - <%= link_to 'Edit', edit_cook_path(cook) %> - <%= link_to 'Destroy', cook, method: :delete, data: {confirm: "Are you sure?"} %></p>
+    <p><%= link_to 'About', cook%> - <%= link_to 'Edit', edit_cook_path(cook) %> - <%= link_to 'Delete', cook, method: :delete, data: {confirm: "Are you sure?"} %></p>
   <% end %>
  </ul>
 

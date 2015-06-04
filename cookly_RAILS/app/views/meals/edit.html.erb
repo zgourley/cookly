@@ -1,0 +1,18 @@
+<h1>Choose your cook</h1>
+
+<p>Choose a cook, and we'll send them a request to see if they're available for your meal time.</p>
+
+<div>
+<%= form_for @meal do |f| %>
+  <%= f.collection_radio_buttons :cook_id, Cook.all, :id, :cook_name%><br>
+  <%= f.submit "Send Meal Request"%>
+<% end %>
+</div>
+  <!-- how to do collection radio buttons in rails  -->
+
+
+
+
+
+
+

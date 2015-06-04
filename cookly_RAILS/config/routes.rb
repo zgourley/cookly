@@ -1,6 +1,24 @@
 Rails.application.routes.draw do
 
+get 'welcome/index'
+
+root 'welcome#index'
+
+get 'users/login' => 'sessions#new'
+post 'users/login' => 'sessions#create'
+delete 'users/logout' => 'sessions#destroy'
+
+get 'cooks/login' => 'cookssessions#new'
+post 'cooks/login' => 'cookssessions#create'
+delete 'cooks/logout' => 'cookssessions#destroy'  
+
 resources :cooks
+
+resources :users 
+
+resources :meals
+
+
 
   #Cooks routes
   # get "cooks" => "cooks#index"

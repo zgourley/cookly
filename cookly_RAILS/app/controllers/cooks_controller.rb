@@ -26,7 +26,7 @@
       end
 
       def update
-        cook = Cook.find(params[:id])
+        @cook = Cook.find(params[:id])
         if @cook.update(cook_params)
           redirect_to @cook, notice: "Cook was successfully updated."
         else
@@ -44,7 +44,11 @@
 
     private
       def cook_params
-        params.require(:cook).permit(:cook_name, :password_digest, :location, :cuisine, :specialty, :description, :cook_image)
+        params.require(:cook).permit(:cook_name, :password, :location, :cuisine, :specialty, :description, :cook_image)
     end
 
   end
+
+#@cook.meals.where(status:open)
+
+

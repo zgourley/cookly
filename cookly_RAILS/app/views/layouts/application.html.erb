@@ -8,6 +8,26 @@
 </head>
 <body>
 
+<nav>
+User:
+<% if logged_in? %>
+  Logged in as: <%= current_user.user_name %> <%= link_to 'Log Out', users_logout_path, method: :delete %>
+<% else %>
+  <%= link_to 'Log In', users_login_path %>
+  <%= link_to 'Sign up', new_user_path %>
+<% end %>
+<br>
+Cooks:
+<% if logged_in? %>
+  Logged in as: <%= current_cook.cook_name %> <%= link_to 'Log Out', cooks_logout_path, method: :delete %>
+<% else %>
+  <%= link_to 'Log In', cooks_login_path %>
+  <%= link_to 'Sign up', new_cook_path %>
+<% end %>
+
+
+</nav>
+
 <%= yield %>
 
 </body>

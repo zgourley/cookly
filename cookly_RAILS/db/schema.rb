@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529173238) do
+ActiveRecord::Schema.define(version: 20150604003106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,10 +35,11 @@ ActiveRecord::Schema.define(version: 20150529173238) do
     t.text     "location"
     t.text     "info"
     t.integer  "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.integer  "user_id"
     t.integer  "cook_id"
+    t.boolean  "confirmed",  default: false
   end
 
   add_index "meals", ["cook_id"], name: "index_meals_on_cook_id", using: :btree
@@ -61,6 +62,7 @@ ActiveRecord::Schema.define(version: 20150529173238) do
     t.datetime "updated_at",      null: false
     t.string   "user_image"
     t.string   "email"
+    t.string   "type"
   end
 
   add_foreign_key "meals", "cooks"

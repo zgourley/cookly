@@ -1,0 +1,2 @@
+module CookssessionsHelper
+end
